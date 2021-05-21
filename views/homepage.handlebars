@@ -1,23 +1,22 @@
 <h1>homepage test</h1>
 
+{{#each |teamMembers| as |teamMember}}
 <table class="table table-bordered">
   <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">Phone</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
       <th scope="col" class="text-end">Action</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Josh</td>
-      <td>Mitchell</td>
-      <td>email@gmail.com</td>
-      <td>555-555-5555</td>
+      <td>{{teamMember.first_name }}</td>
+      <td>{{teamMember.last_name}}</td>
+      <td>{{teamMember.sports_team_name}}</td>
       <td class="text-end">
 
           <a href="#" type="button" class="btn btn-light btn-small"><i class="bi bi-eye"></i> View</a>
@@ -29,3 +28,4 @@
     
   </tbody>
 </table>
+{{/each}}
