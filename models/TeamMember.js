@@ -40,17 +40,17 @@ TeamMember.init (
             allowNull: false
         },
         // here we can decide which kinds of stats we would want to add
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id'
+            }
+        },
         team_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'team',
-                key: 'id'
-            }
-        },
-        user_id: {
-            type: DataTypes.STRING,
-            references: {
-                model: 'user',
                 key: 'id'
             }
         }
