@@ -20,10 +20,6 @@ TeamMember.init (
             type: DataTypes.STRING,
             allowNull: false
         },
-        position: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
         // name of sports team they play for
         sports_team_name: {
             type: DataTypes.STRING,
