@@ -133,4 +133,8 @@ router.delete(':/id', (req, res) => {
   })
 });
 
+router.get('/adduser', (req, res) => {
+  res.render('add-user');
+})
+
 module.exports = router; 
