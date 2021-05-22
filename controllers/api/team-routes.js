@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { User, Comment, Vote, TeamMember, Team } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // get all teams
 router.get('/', (req, res) => {
@@ -10,8 +11,7 @@ router.get('/', (req, res) => {
             'team_name',
             'team_type',
             'created_at',
-            // WILL NEED THIS LATER WHEN WE ADD VOTING CAPABILITY
-            //[sequelize.literal('(SELECT COUNT(*) FROM vote WHEREteam.id = vote.team_id)'), 'vote_count']
+            [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE team.id = vote.team_id)'), 'vote_count']
         ],
         include: [
             {
@@ -51,6 +51,9 @@ router.get('/', (req, res) => {
 // get a single team
 router.get('/:id', (req, res) => {
     Team.findOne({
+        where: {
+            id: req.params.id
+        },
         attributes: [
             'id',
             'team_name',
@@ -99,6 +102,73 @@ router.get('/:id', (req, res) => {
     });
 });
 
+// create a team
+router.post('/',  (req, res) => {
+    Team.create({
+        team_name: req.body.team_name,
+        team_type: req.body.team_type
+    })
+    .then(dbTeamData => res.json(dbTeamData))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
+})
+
+router.put('/upvote', withAuth, (req, res) => {
+    // custom static method created in models/Team.js
+    Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
+      .then(updatedVoteData => res.json(updatedVoteData))
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
+router.put('/:id', withAuth, (req, res) => {
+    Team.update(
+        {
+            team_name: req.body.team_name,
+            team_type: req.body.team_type,
+        },
+        {
+            where: {
+                id: req.params.id
+            }
+        }
+    )
+    .then(dbTeamData => {
+        if (!dbTeamData) {
+            res.status(404).json({ message: 'No team found' });
+            return;
+        }
+        res.json(dbTeamData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
+router.delete('/:id', withAuth, (req, res) => {
+    console.log('id', req.params.id);
+    Team.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(dbTeamData => {
+        if (!dbTeamData) {
+            res.status(404).json({ message: 'No team found' })
+            return;
+        }
+        res.json(dbTeamData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
+});
 
 
 module.exports = router;
