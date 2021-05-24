@@ -3,6 +3,11 @@ const { Team, TeamMember } = require('../models/')
 const sequelize = require('../config/connection');
 const { post } = require('./api');
 
+
+
+router.get('/', (req, res) => {
+  res.render('homepage')
+});
 // router.get('/', (req, res) => {
 //   TeamMember.findAll({
 //     attributes: [
@@ -18,7 +23,7 @@ const { post } = require('./api');
 //           'team_name',
 //           'team_type'
 //         ]
-//       }
+//       }  
 //     ]
 //   })
 //   .then(results => {
@@ -30,9 +35,5 @@ const { post } = require('./api');
 //     })
 //   })
 // });
-
-router.get('/', (req, res) => {
-  res.render('homepage');
-})
 
 module.exports = router;
