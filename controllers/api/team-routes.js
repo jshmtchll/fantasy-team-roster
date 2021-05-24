@@ -75,6 +75,12 @@ router.get('/', (req, res) => {
     })
   });
   
+  router.put('/:id', (req, res) => {
+      Team.update(
+
+      )
+  })
+  
   router.delete(':/id', (req, res) => {
     Team.destroy({
       where: {
