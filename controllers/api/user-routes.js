@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Team, Comments, Vote } = require('../../models');
+const { User, Team, Comment, TeamMember, Vote } = require('../../models');
 
 router.get('/', (req, res) => {
   User.findAll({
@@ -24,8 +24,21 @@ router.get('/:id', (req, res) => {
         attributes: ['team_type', 'team_name']
       },
       {
-        model: Comments,
-        attributes: [''],
+        model: TeamMember,
+        attributes: [
+          'first_name', 
+          'last_name',
+          'sports_team_name',
+          'position_played',
+          'win_percent',
+          'age',
+          'user_id',
+          'team_id'
+        ]
+      },
+      {
+        model: Comment,
+        attributes: ['id', 'comment_text', 'created_at'],
         include: {
           model: Team,
           attributes: ['team_name']
@@ -35,7 +48,7 @@ router.get('/:id', (req, res) => {
         model: Team,
         attributes: ['team_name'],
         through: Vote,
-        as: ''
+        as: 'voted_teams'
       }
     ]
   })
