@@ -6,7 +6,7 @@ const { post } = require('./api');
 
 
 router.get('/', (req, res) => {
-  res.render('homepage')
+  res.render('homepage');
 });
 // router.get('/', (req, res) => {
 //   TeamMember.findAll({
