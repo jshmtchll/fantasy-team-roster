@@ -48,8 +48,7 @@ router.get('/', (req, res) => {
     })
 });
 
-// get a single team
-router.get('/:id', (req, res) => {
+  router.get('/:id', (req, res) => {
     Team.findOne({
         where: {
             id: req.params.id
