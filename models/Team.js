@@ -3,7 +3,35 @@ const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 class Team extends Model {
-    // I think here is where we need to add our methods to attach comments and votes, this is basically the same as a post from the modules
+    static upvote(body, models) {
+        return models.Vote.create({
+          user_id: body.user_id,
+          team_id: body.team_id
+        }).then(() => {
+          return Team.findOne({
+            where: {
+              id: body.team_id
+            },
+            attributes: [
+              'id',
+              'team_name',
+              'team_type',
+              'created_at',
+              [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE team.id = vote.team_id)'), 'vote_count']
+            ],
+            include: [
+              {
+                model: models.Comment,
+                attributes: ['id', 'comment_text', 'team_id', 'user_id', 'created_at'],
+                include: {
+                  model: models.User,
+                  attributes: ['username']
+                }
+              }
+            ]
+          });
+        });
+      }
 }
 
 Team.init (

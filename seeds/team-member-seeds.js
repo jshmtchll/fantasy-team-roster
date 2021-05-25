@@ -1,7 +1,6 @@
 const sequelize = require('../config/connection');
-const { User, Team, TeamMember } = require('../models');
-const seedTeams = require('./team-seeds');
-
+const { TeamMember } = require('../models');
+ 
 const teamMemberData = [
     {
         first_name: 'LeBron',
