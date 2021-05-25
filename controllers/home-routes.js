@@ -6,30 +6,7 @@ const { index } = require('./api');
 
 
 router.get('/', (req, res) => {
-  Team.findAll({
-    attributes: [
-      'team_type',
-      'team_name'
-    ],
-    include: [
-      {
-        model: TeamMember,
-        attributes: ['first_name', 'last_name', 'sports_team_name', 'position_played', 'win_percent', 'age']
-      }
-    ]
-  })
-  .then(results => {
-    const teams = results.map(post => post.get({ plain: true }));
-
-    res.render('homepage', {
-      teams,
-      loggedIn: req.session.loggedIn
-    });
-  })
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err)
-  })
+ res.render('homepage');
 });
 
 

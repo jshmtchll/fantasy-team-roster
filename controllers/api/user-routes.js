@@ -78,7 +78,8 @@ router.post('/', (req, res) => {
       req.session.username = results.username;
       req.session.loggedIn = true;
 
-      res.json(results)
+
+      console.log(results);
     })
   })
   .catch(err => {
