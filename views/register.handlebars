@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fantasy Team Roster</title>
+    <link rel="stylesheet" href="../public/css/#">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="custom-container">
+     <h1 class="text-center m-4 text-success">Fantasy Team Roster</h1>
+    <div class="jumbotron">
+        <h2 class="text-center text-primary">Registration Page</h2>
+        <br>
+        <form method="post" id="register" action="">
+            <div class="registration-from">
+                <label for="first-name">First Name *</label>
+                <input type="text" class="form-control" id="first-name" name="first-name" placeholder="Enter your First Name" value="{{#}}">
+            </div>
+            <div class="registration-from">
+                <label for="last-name">Last Name *</label>
+                <input type="text" class="form-control" id="last-name" name="last-name" placeholder="Enter your Last Name" value="{{#}}">
+            </div>
+            <div class="registration-from">
+                <label for="email">Email *</label>
+                <input type="text" class="form-control" name="email" id="email" placeholder="Enter your email" value="{{#}}">
+            </div>
+            <div class="registration-from">
+                <label for="user-name">Username *</label>
+                <input type="text" class="form-control" name="user-name" id="user-name" placeholder="Enter a username" value="{{#}}">
+            </div>
+            <div class="registration-from">
+                <label for="password">Password *</label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="Enter a password"value="{{#}}">                
+            </div>
+            <div class="registration-from">
+                <label for="confirm-password">Confirm Password *</label>
+                <input type="password" class="form-control" name="confirm-password" id="confirm-password" placeholder="Enter the same password" value="{{#}}">
+            </div>
+            <div class="registration-from">
+                <input type="submit" value="Register" class="btn btn-info btn-block">
+            </div>
+            <div class="registration-from">
+                <div class="row">
+                    <div class="col-md-8">
+                        Already a user? Login <a href="/">here</a>!
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+<script src="../public/javascript/#"></script>
+</html>
