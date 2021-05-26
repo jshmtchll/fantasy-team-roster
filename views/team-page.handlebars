@@ -31,11 +31,21 @@
   <label for="lastname">Players Last Name</label>
   <input type="text" id="position" name="position" placeholder="Player's position">
   <label for="position">Players Position</label>
+  <input type="number" id="age" name="age" placeholder="Player's age">
+  <label for="age">Players age</label>
+  <input type="number" id="win-percent" name="win-percent" placeholder="Win Percentage">
+  <label for="age">Players Win Percentage</label>
+  <br>
+  <label for="team-name">Team Name</label>
+  <select id="team-name" name="team-name">
+    {{#each teams as |team|}}
+    <option value={{team.id}}>
+      {{team.team_name}}
+    </option>
+    {{/each}}
+  </select>
   <button id="submitPlayerBtn" type="submit">Submit</button>
 </form>
-
-<h2>All Teams</h2>
-
 <script src="/javascript/postPlayer.js"></script>
 <script src="/javascript/postTeam.js"></script>
 </body>

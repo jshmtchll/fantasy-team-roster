@@ -3,10 +3,6 @@ const { User, Team, Comment, TeamMember, Vote } = require('../../models');
 
 
 router.get('/', (req, res) => {
-  res.render('add-user');
-})
-
-router.get('/', (req, res) => {
   User.findAll({
     attributes: { exclude: ['password'] }
   })
@@ -83,8 +79,7 @@ router.post('/', (req, res) => {
       req.session.username = results.username;
       req.session.loggedIn = true;
 
-
-      console.log(results);
+      res.json(results);
     })
   })
   .catch(err => {

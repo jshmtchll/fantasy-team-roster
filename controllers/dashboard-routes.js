@@ -41,8 +41,11 @@ router.get('/', (req, res) => {
     })
     .then(dbTeamData => {
         const teams = dbTeamData.map(team => team.get({ plain: true }));
-        console.log(teams)
-        res.render('dashboard', { teams });
+
+        res.render('dashboard', { 
+            teams,
+            loggedIn: req.session.loggedIn
+         });
     })
     .catch(err => {
         console.log(err);
