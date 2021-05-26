@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { User, Team, Comment, TeamMember } = require('../models/');
 const sequelize = require('sequelize');
+const withAuth = require('../utils/auth');
 
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
     Team.findAll({
         attributes: [
             'id',
@@ -40,8 +41,7 @@ router.get('/', (req, res) => {
         ]
     })
     .then(dbTeamData => {
-        const teams = dbTeamData.map(team => team.get({ plain: true }));
-
+        const teams = dbTeamData.map(team => team.get({ plain: true }));       
         res.render('dashboard', { 
             teams,
             loggedIn: req.session.loggedIn
@@ -52,5 +52,17 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
     })
 });
+
+router.get('/team-view/:id', withAuth, (req, res) => {
+    Team.findByPk(req.params.id, {
+        attributes: [
+            'id',
+            'team_name',
+            'team_type',
+            'created_at',
+            [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE team.id = vote.team_id)'), 'vote_count']
+        ]
+    })
+})
 
 module.exports = router;
