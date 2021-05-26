@@ -91,15 +91,16 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
     Team.create({
-        username: req.body.username,
-        email: req.body.email,
-        password: req.body.password
+      team_name: req.body.team_name,
+      team_type: req.body.team_type
     })
-        .then(results => {
-            req.session.save(() => {
-                req.session.user_id = results.id;
-                req.session.username = results.username;
-                req.session.loggedIn = true;
+    .then(dbTeamData => res.json(dbTeamData))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
+});
+
 
                 res.json(results)
             })
