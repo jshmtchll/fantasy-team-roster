@@ -4,9 +4,9 @@ const submitTeamBtn = document.querySelector('#submitTeamBtn');
 async function sendTeam(event) {
   event.preventDefault();
 
-  const team_type = document.querySelector('input[name=teamType]').value.trim()
+  const team_type = document.querySelector('input[name=teamType]:checked').placeholder;
   const team_name = document.querySelector('#teamName').value.trim()
-  console.log(team_type, team_name)
+  console.log(team_type, team_name);
 
   if(team_name && team_type) {
     const response = await fetch('/api/teams/', {
