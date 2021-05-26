@@ -3,10 +3,6 @@ const { User, Team, Comment, TeamMember, Vote } = require('../../models');
 
 
 router.get('/', (req, res) => {
-  res.render('add-user');
-})
-
-router.get('/', (req, res) => {
   User.findAll({
     attributes: { exclude: ['password'] }
   })
