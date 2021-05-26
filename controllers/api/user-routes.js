@@ -1,6 +1,11 @@
 const router = require('express').Router();
 const { User, Team, Comment, TeamMember, Vote } = require('../../models');
 
+
+router.get('/', (req, res) => {
+  res.render('add-user');
+})
+
 router.get('/', (req, res) => {
   User.findAll({
     attributes: { exclude: ['password'] }
@@ -147,8 +152,5 @@ router.delete(':/id', (req, res) => {
   })
 });
 
-router.get('/adduser', (req, res) => {
-  res.render('add-user');
-})
 
 module.exports = router; 

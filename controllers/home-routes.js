@@ -1,13 +1,15 @@
 const router = require('express').Router();
 const { Team, TeamMember } = require('../models/')
 const sequelize = require('../config/connection');
-const { post } = require('./api');
+const { index } = require('./api');
 
 
 
 router.get('/', (req, res) => {
-  res.render('homepage');
+ res.render('homepage');
 });
+
+
 // router.get('/', (req, res) => {
 //   TeamMember.findAll({
 //     attributes: [
