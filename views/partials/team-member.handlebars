@@ -1,0 +1,20 @@
+
+{{#each teams as |teamMember|}}
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <td>{{teamMember.team_type}}</td>
+      <td>{{teamMember.team_name}}</td>
+    </tr>
+    <tr>
+      <th scope="row">1</th>
+      <td>{{teamMember.first_name }}</td>
+      <td>{{teamMember.last_name}}</td>
+      <td>{{teamMember.sports_team_name}}</td>
+      <td>{{teamMember.win_percent}}</td>
+      <td>{{teamMember.age}}</td>
+      <td class="text-end">
+    </tr>
+  </tbody>
+</table>
+{{/each}}
