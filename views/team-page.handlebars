@@ -36,7 +36,7 @@
   <label for="age">Players Win Percentage</label>
   <input class="form-control" type="number" id="win-percent" name="win-percent" placeholder="Win Percentage">
   <br>
-  <label for="team-name">Team Name</label>
+  <label id="team-name-label" for="team-name">Team Name</label>
   <select class="form-select" id="team-name" name="team-name">
     {{#each teams as |team|}}
     <option value={{team.id}}>

@@ -12,3 +12,7 @@ label {
 button {
   margin: 10px;
 }
+
+#team-name-label {
+  font-size: 20px;
+}
