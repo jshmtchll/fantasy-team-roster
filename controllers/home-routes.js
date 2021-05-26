@@ -38,4 +38,16 @@ router.get('/', (req, res) => {
 //   })
 // });
 
+router.get('/teams', (req, res) => {
+  Team.findAll({})
+  .then(results => {
+    const teams = results.map(team => team.get({plain: true}) )
+
+    res.render('team-page', {
+      teams,
+      loggedIn: req.session.loggedIn
+    })
+  })
+});
+
 module.exports = router;
