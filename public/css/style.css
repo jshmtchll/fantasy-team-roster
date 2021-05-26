@@ -1,18 +1,32 @@
 body {
-  box-sizing: border-box;
+  background-image: url("/img/bg.jpg") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
 }
 
-input {
-  margin: 10px;
-}
-label {
-  margin: 10px;
-}
-
-button {
-  margin: 10px;
+.login-title {
+    color: white;
+    font-size: 50px;
+    font-family: 'Itim', cursive;
+    text-shadow: 2px 2px 8px #050505;
 }
 
-#team-name-label {
-  font-size: 20px;
+.login {
+    color: white;
+    font-size: 50px;
+    font-family: 'Itim', cursive;
+    text-shadow: 2px 2px 8px #050505;
+}
+
+.navtext {
+    font-size: 45px;
+    font-weight: bold;
+    font-family: 'Itim', cursive;
+    text-shadow: 2px 2px 8px #050505;
+    
+}
+
+.navbar {
+    background-color: rgba(255, 255, 0, 0) !important;
+    border-bottom: 2px solid black;
 }
