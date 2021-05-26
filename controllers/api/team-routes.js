@@ -113,7 +113,7 @@ router.post('/',  (req, res) => {
         console.log(err);
         res.status(500).json(err);
     })
-})
+});
 
 router.put('/upvote', withAuth, (req, res) => {
     // custom static method created in models/Team.js
