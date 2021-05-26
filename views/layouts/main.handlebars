@@ -21,23 +21,26 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navtext navbar-brand" href="/">Fantasy Team Builder</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        
+
+
 
         {{#if loggedIn}}
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <a class="nav-link" href="/dashboard"><div class="box-3">
-                <div class="button btn-three">
-                    <span>Dashboard</span>
-                </div></a>
-            </div>
-            <a href="/" class="nav-link" id="logout"><div class="box-3">
-                <div class="button btn-three">
+        <div class="box-3" id="navbarSupportedContent">
+            <a class="nav-link" href="/dashboard">
+                <div class="box-3">
+                    <div class="button btn-jsh">
+                        <span>Dashboard</span>
+                    </div>
+            </a>
+        </div>
+        <a href="/" class="nav-link" id="logout">
+            <div class="box-3">
+                <div class="button btn-jsh">
                     <span>Logout</span>
-                </div></a>
-            </div>
+                </div>
+        </a>
+        </div>
         </div>
         {{/if}}
     </nav>
