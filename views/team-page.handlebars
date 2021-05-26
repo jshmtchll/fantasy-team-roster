@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<h1>Teams Page</h1>
+
+<h2>Add a Team</h2>
+<form>
+  <input type="radio" id="football" name="teamType" placeholder="Football">
+  <label for="football">Football</label><br>
+  <input type="radio" id="basketball" name="teamType" placeholder="Basketball">
+  <label for="basketball">Basketball</label><br>
+  <input type="radio" id="baseball" name="teamType" placeholder="Baseball">
+  <label for="baseball">Baseball</label>
+  <br>
+  <input type="text" id="teamName" name="teamName" placeholder="Give your team a name">
+  <label for="teamName">Team Name</label>
+  <button id="submitTeamBtn" type="submit">Submit</button>
+</form>
+
+<h2>Add a Player</h2>
+<form>
+  <input type="text" id="firstname" name="firstname" placeholder="first name">
+  <label for="firstname">Players First Name</label>
+  <input type="text" id="lastname" name="lastname" placeholder="last name">
+  <label for="lastname">Players Last Name</label>
+  <input type="text" id="position" name="position" placeholder="Player's position">
+  <label for="position">Players Position</label>
+  <input type="number" id="age" name="age" placeholder="Player's age">
+  <label for="age">Players age</label>
+  <input type="number" id="win-percent" name="win-percent" placeholder="Win Percentage">
+  <label for="age">Players Win Percentage</label>
+  <br>
+  <label for="team-name">Team Name</label>
+  <select id="team-name" name="team-name">
+    {{#each teams as |team|}}
+    <option value={{team.id}}>
+      {{team.team_name}}
+    </option>
+    {{/each}}
+  </select>
+  <button id="submitPlayerBtn" type="submit">Submit</button>
+</form>
+<script src="/javascript/postPlayer.js"></script>
+<script src="/javascript/postTeam.js"></script>
+</body>
+</html>

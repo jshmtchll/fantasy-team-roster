@@ -1,38 +1,49 @@
-<div class="col-6">
-    <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingInput" value="{{this.first_name}}" placeholder="First Name"
-            name="first_name">
-        <label for="floatingInput">First Name</label>
+<form class='container signup-form'>
+    <h3>Enter your credentials to create an account</h3>
+    <div class="col-6">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email-signup" value="{{this.email}}" placeholder="email@email.com"
+                name="email">
+            <label for="email-signup">Email</label>
+        </div>
     </div>
-</div>
-<div class="col-6">
-    <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingInput" value="{{this.last_name}}" placeholder="Last Name"
-            name="last_name">
-        <label for="floatingInput">Last Name</label>
+    <div class="col-6">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="username-signup" value="{{this.username}}" placeholder="Username"
+                name="username">
+            <label for="username-signup">Username</label>
+        </div>
     </div>
-</div>
-<div class="col-6">
-    <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="floatingInput" value="{{this.email}}" placeholder="email@email.com"
-            name="email">
-        <label for="floatingInput">Email</label>
+    <div class="col-6">
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="password-signup" value="{{this.password}}" placeholder="Password"
+                name="password">
+            <label for="password-signup">Password</label>
+        </div>
     </div>
-</div>
-<div class="col-6">
-    <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingInput" value="{{this.phone}}" placeholder="Phone"
-            name="phone">
-        <label for="floatingInput">Phone</label>
+    <div class="col-6 d-grid">
+        <button class="btn btn-primary" type="submit">Submit</button>
     </div>
-</div>
-<div class="col-12">
-    <div class="form-floating mb-3">
-        <textarea class="form-control" placeholder="Leave a comment here" id="comments" name="comments"
-            style="height: 200px">{{this.comments}}</textarea>
-        <label for="comments">Comments</label>
+</form>
+
+<form class='container login-form'>
+    <h3 class='mt-3'>Login</h3>
+    <div class="col-6">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email-login" value="{{this.email}}" placeholder="email@email.com"
+                name="email">
+            <label for="email-login">Email</label>
+        </div>
     </div>
-</div>
-<div class="col-12 d-grid">
-    <button class="btn btn-primary" type="submit">Submit</button>
-</div>
+    <div class="col-6">
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="password-login" value="{{this.password}}" placeholder="Password"
+                name="password">
+            <label for="password-login">Password</label>
+        </div>
+    </div>
+    <div class="col-6 d-grid">
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+</form>
+

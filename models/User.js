@@ -34,7 +34,7 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [8], //pw must be a minimum of 8 characters long
+                len: [6], //pw must be a minimum of 8 characters long
             },
         },
     },
