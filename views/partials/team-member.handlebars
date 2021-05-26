@@ -1,16 +1,20 @@
 
-{{#each teams as |teamMember|}}
+
 <table class="table table-bordered">
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>{{teamMember.first_name }}</td>
-      <td>{{teamMember.last_name}}</td>
-      <td>{{teamMember.sports_team_name}}</td>
-      <td>{{teamMember.win_percent}}</td>
-      <td>{{teamMember.age}}</td>
-      <td class="text-end">
-    </tr>
-  </tbody>
+  <tr>
+    <th scope='col'>First Name</th>
+    <th scope='col'>Last Name</th>
+    <th scope='col'>Team Played For</th>
+    <th scope='col'>Win Percent (x100)</th>
+    <th scope='col'>Age</th>
+  </tr>
+  {{#each this}}
+  <tr>
+    <th scope='row'>{{first_name }}</td>
+    <th scope='row'>{{last_name}}</td>
+    <td>{{sports_team_name}}</td>
+    <td>{{win_percent}}</td>
+    <td>{{age}}</td>
+  </tr>
+  {{/each}}
 </table>
-{{/each}}
