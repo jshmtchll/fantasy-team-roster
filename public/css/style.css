@@ -1,2 +1,32 @@
 body {
+  background-image: url("/img/bg.jpg") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.login-title {
+    color: white;
+    font-size: 50px;
+    font-family: 'Itim', cursive;
+    text-shadow: 2px 2px 8px #050505;
+}
+
+.login {
+    color: white;
+    font-size: 50px;
+    font-family: 'Itim', cursive;
+    text-shadow: 2px 2px 8px #050505;
+}
+
+.navtext {
+    font-size: 45px;
+    font-weight: bold;
+    font-family: 'Itim', cursive;
+    text-shadow: 2px 2px 8px #050505;
+    
+}
+
+.navbar {
+    background-color: rgba(255, 255, 0, 0) !important;
+    border-bottom: 2px solid black;
 }
