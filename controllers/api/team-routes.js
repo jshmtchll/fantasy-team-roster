@@ -100,16 +100,11 @@ router.post('/', (req, res) => {
         res.status(500).json(err);
     })
 });
-
-
-                res.json(results)
-            })
-        })
+        res.json(results)
         .catch(err => {
             console.log(err)
             res.status(500).json(err)
-        })
-});
+        });
 
 router.put('/:id', (req, res) => {
     Team.update(
