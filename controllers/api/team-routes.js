@@ -59,7 +59,7 @@ router.get('/:id', (req, res) => {
             'team_name',
             'team_type',
             'created_at',
-            //[sequelize.literal('(SELECT COUNT(*) FROM vote WHEREteam.id = vote.team_id)'), 'vote_count']
+            [sequelize.literal('(SELECT COUNT(*) FROM vote WHEREteam.id = vote.team_id)'), 'vote_count']
         ],
         include: [
             {
@@ -117,7 +117,7 @@ router.post('/',  (req, res) => {
 
 router.put('/upvote', withAuth, (req, res) => {
     // custom static method created in models/Team.js
-    Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
+    Team.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
       .then(updatedVoteData => res.json(updatedVoteData))
       .catch(err => {
         console.log(err);
