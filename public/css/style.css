@@ -29,6 +29,19 @@ body {
   text-shadow: 2px 2px 8px #050505;
 }
 
+.your-teams {
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: "Itim", cursive;
+  text-shadow: 2px 2px 8px #050505;
+}
+
+.logoimage {
+  width: 300px;
+  max-width: 700px;
+}
+
 .navtext {
   font-size: 45px;
   font-weight: bold;
@@ -64,13 +77,13 @@ div[class*="box"] {
   cursor: pointer;
 }
 
-.btn-three {
+.btn-jsh {
   color: #fff;
   font-weight: bold;
   transition: all 0.5s;
   position: relative;
 }
-.btn-three::before {
+.btn-jsh::before {
   content: "";
   position: absolute;
   top: 0;
@@ -81,11 +94,11 @@ div[class*="box"] {
   background-color: rgba(255, 255, 255, 0.1);
   transition: all 0.3s;
 }
-.btn-three:hover::before {
+.btn-jsh:hover::before {
   opacity: 0;
   transform: scale(0.5, 0.5);
 }
-.btn-three::after {
+.btn-jsh::after {
   content: "";
   position: absolute;
   top: 0;
@@ -95,10 +108,10 @@ div[class*="box"] {
   z-index: 1;
   opacity: 0;
   transition: all 0.3s;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid rgb(255, 255, 255);
   transform: scale(1.2, 1.2);
 }
-.btn-three:hover::after {
+.btn-jsh:hover::after {
   opacity: 1;
   transform: scale(1, 1);
 }
@@ -119,3 +132,10 @@ a:active {
   text-decoration: none;
   color: inherit;
 }
+
+.box-3 {
+  display: flex;
+  align-items: flex-start;
+  padding-left: 20px;
+}
+
