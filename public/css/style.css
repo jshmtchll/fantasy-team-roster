@@ -1,2 +1,18 @@
 body {
+  box-sizing: border-box;
+}
+
+input {
+  margin: 10px;
+}
+label {
+  margin: 10px;
+}
+
+button {
+  margin: 10px;
+}
+
+#team-name-label {
+  font-size: 20px;
 }
