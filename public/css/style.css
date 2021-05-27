@@ -193,3 +193,17 @@ label {
   border-color: #96d3ec;
   color: black;
 }
+
+th, td {
+    color: cornsilk;
+    
+}
+
+.table, .table-bordered {
+    border: 6px solid white;
+    background-color: rgba(7, 7, 0, 0.384) !important;
+}
+
+h5, h3, p {
+    color: white;
+}
