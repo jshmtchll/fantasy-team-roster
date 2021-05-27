@@ -13,7 +13,8 @@ body {
   background-image: url("/img/bg.jpg") !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  background-size: auto;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .login-title {
@@ -118,7 +119,7 @@ div[class*="box"] {
 }
 
 .form-control {
-    width: 100% !important;
+  width: 100% !important;
 }
 
 .abtn {
@@ -145,27 +146,39 @@ a:active {
 }
 
 .team-form {
-    background-color: rgba(7, 7, 0, 0.384) !important;
-    width: 50%;
-    border-radius: 15px 50px;
-  background: #73AD21;
+  background-color: rgba(7, 7, 0, 0.384) !important;
+  width: 50%;
+  border-radius: 15px 50px;
   padding: 20px;
   align-items: center;
- 
-  
-
 }
 
 label {
-    color: white;
-    font-size: 20px;
+  color: white;
+  font-size: 20px;
 }
 
 .form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
- 
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.float {
+  display: flex;
+  flex-direction: column;
+  float: right;
+}
+
+.form-control {
+  width: 500px !important;
+  background-color: rgba(7, 7, 0, 0.384) !important;
+}
+
+.form-control:active,
+.form-control:focus,
+.form-control:focus:active {
+  background-color: #96d3ec!important;
+  border-color: #96d3ec;
+  color: black;
+}
