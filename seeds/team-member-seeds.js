@@ -1,13 +1,12 @@
 const sequelize = require('../config/connection');
-const { User, Team, TeamMember } = require('../models');
-const seedTeams = require('./team-seeds');
-
+const { TeamMember } = require('../models');
+ 
 const teamMemberData = [
     {
         first_name: 'LeBron',
         last_name: 'James',
         sports_team_name: 'Lakers',
-        position_name: 'multiple',
+        position_played: 'multiple',
         win_percent: .6,
         age: 36,
         team_id: 1,
@@ -17,7 +16,7 @@ const teamMemberData = [
         first_name: 'Tom',
         last_name: 'Brady',
         sports_team_name: 'Bucaneers',
-        position_name: 'Quarterback',
+        position_played: 'Quarterback',
         win_percent: .77,
         age: 43,
         team_id: 2,

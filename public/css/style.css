@@ -1,0 +1,220 @@
+html {
+  box-sizing: border-box;
+}
+
+input {
+  margin: 10px;
+}
+label {
+  margin: 10px;
+}
+
+body {
+  background-image: url("/img/bg.jpg") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.login-title {
+  color: white;
+  font-size: 50px;
+  font-family: "Itim", cursive;
+  text-shadow: 2px 2px 8px #050505;
+}
+
+.login {
+  color: white;
+  font-size: 50px;
+  font-family: "Itim", cursive;
+  text-shadow: 2px 2px 8px #050505;
+}
+
+.your-teams {
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: "Itim", cursive;
+  text-shadow: 2px 2px 8px #050505;
+}
+
+.logoimage {
+  width: 300px;
+  max-width: 700px;
+}
+
+.navtext {
+  font-size: 45px;
+  font-weight: bold;
+  font-family: "Itim", cursive;
+  text-shadow: 2px 2px 8px #050505;
+}
+
+.dash-title {
+  color: white;
+  font-size: 50px;
+  font-family: "Itim", cursive;
+  text-shadow: 2px 2px 8px #050505;
+}
+
+.navbar {
+  background-color: rgba(7, 7, 0, 0.384) !important;
+  border-bottom: 2px solid black;
+}
+
+div[class*="box"] {
+  height: 33.33%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+}
+
+.btn-jsh {
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.5s;
+  position: relative;
+}
+.btn-jsh::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+}
+.btn-jsh:hover::before {
+  opacity: 0;
+  transform: scale(0.5, 0.5);
+}
+.btn-jsh::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 2px solid rgb(255, 255, 255);
+  transform: scale(1.2, 1.2);
+}
+.btn-jsh:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.form-control {
+  width: 100% !important;
+}
+
+.abtn {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+
+  text-decoration: none;
+  color: white;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.box-3 {
+  display: flex;
+  align-items: flex-start;
+  padding-left: 20px;
+}
+
+.team-list{
+  background-color: rgba(7, 7, 0, 0.384) !important;
+  width: 50%;
+  color: rgb(252, 252, 252);
+  font-family: "Itim", cursive;
+  font-weight: bold;
+  border-radius: 15px 50px;
+}
+
+.team-form {
+  background-color: rgba(7, 7, 0, 0.384) !important;
+  width: 50%;
+  border-radius: 15px 50px;
+  background: #73AD21;
+  padding: 20px;
+  align-items: center;
+ 
+}
+
+label {
+  color: white;
+  font-size: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.float {
+  display: flex;
+  flex-direction: column;
+  float: right;
+}
+
+.form-control {
+  width: 500px !important;
+  background-color: rgba(7, 7, 0, 0.384) !important;
+}
+
+.form-control:active,
+.form-control:focus,
+.form-control:focus:active {
+  background-color: #96d3ec!important;
+  border-color: #96d3ec;
+  color: black;
+}
+
+th, td {
+    color: cornsilk;
+    
+}
+
+.table, .table-bordered {
+    border: 6px solid white;
+    background-color: rgba(7, 7, 0, 0.384) !important;
+}
+
+h5, h3, p {
+    color: white;
+}
+
+.btn {
+    width: 100px;
+    color: white !important;
+}
+
+.indent {
+    text-indent: 90px;
+    font-weight: bold;
+}
+

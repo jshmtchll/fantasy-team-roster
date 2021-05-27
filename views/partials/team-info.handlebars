@@ -1,0 +1,11 @@
+
+<div class='team-info'>
+    <div class='row'>
+        <h5 class='team-header col-6'>{{team_name}} | Type: {{team_type}}</h5>
+        <a href='/dashboard/team-view/{{id}}'>
+            <input type="submit" value="View Team" class="btn btn-info btn-block col-2"> <!-- need to format buttons -->
+        </a>
+    </div>
+    <p>Created by: <span class='font-weight-bold'>{{user.username}}</span> at {{format_date created_at}}<p> <!-- FIX DATE FORMAT -->
+    <p>{{vote_count}} Vote(s) | {{comments.length}} Comment(s)</p> <!-- can add plural functions like from the modules here if we have time -->
+</div>
