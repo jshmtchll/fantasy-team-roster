@@ -144,16 +144,23 @@ a:active {
   padding-left: 20px;
 }
 
+.team-list{
+  background-color: rgba(7, 7, 0, 0.384) !important;
+  width: 50%;
+  color: rgb(252, 252, 252);
+  font-family: "Itim", cursive;
+  font-weight: bold;
+  border-radius: 15px 50px;
+}
+
 .team-form {
-    background-color: rgba(7, 7, 0, 0.384) !important;
-    width: 50%;
-    border-radius: 15px 50px;
+  background-color: rgba(7, 7, 0, 0.384) !important;
+  width: 50%;
+  border-radius: 15px 50px;
   background: #73AD21;
   padding: 20px;
   align-items: center;
  
-  
-
 }
 
 label {
