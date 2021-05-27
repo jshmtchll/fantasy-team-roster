@@ -207,3 +207,14 @@ th, td {
 h5, h3, p {
     color: white;
 }
+
+.btn {
+    width: 100px;
+    color: white !important;
+}
+
+.indent {
+    text-indent: 90px;
+    font-weight: bold;
+}
+
