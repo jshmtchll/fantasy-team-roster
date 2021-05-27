@@ -13,6 +13,7 @@ body {
   background-image: url("/img/bg.jpg") !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
+  background-size: auto;
 }
 
 .login-title {
@@ -57,7 +58,7 @@ body {
 }
 
 .navbar {
-  background-color: rgba(255, 255, 0, 0) !important;
+  background-color: rgba(7, 7, 0, 0.384) !important;
   border-bottom: 2px solid black;
 }
 
@@ -116,6 +117,10 @@ div[class*="box"] {
   transform: scale(1, 1);
 }
 
+.form-control {
+    width: 100% !important;
+}
+
 .abtn {
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -137,5 +142,30 @@ a:active {
   display: flex;
   align-items: flex-start;
   padding-left: 20px;
+}
+
+.team-form {
+    background-color: rgba(7, 7, 0, 0.384) !important;
+    width: 50%;
+    border-radius: 15px 50px;
+  background: #73AD21;
+  padding: 20px;
+  align-items: center;
+ 
+  
+
+}
+
+label {
+    color: white;
+    font-size: 20px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+    
 }
 
