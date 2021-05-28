@@ -1,13 +1,7 @@
 <h1 style="padding-left: 20px; padding-top:48px;" class="dash-title">Dashboard</h1>
 
-<div class='user-teams container'>
-  <h3 class='your-teams mb-3'>Your Teams</h3>
-  <!-- list teams here in line with user auth, add edit buttons to each of them -->
-  <!-- add button to create a team, both of these will need to route to a new create team form -->
-</div>
-
 <div class='other-teams container'>
-  <h3 class='your-teams mb-3'>Other Teams</h3>
+  <h3 class='your-teams mb-3'>Teams</h3>
   <ol class='team-list'>
     {{#each teams as |team|}}
       {{> team-info team}}
