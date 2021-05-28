@@ -103,10 +103,11 @@ router.get('/:id', (req, res) => {
 });
 
 // create a team
-router.post('/',  (req, res) => {
+router.post('/', withAuth, (req, res) => {
     Team.create({
         team_name: req.body.team_name,
-        team_type: req.body.team_type
+        team_type: req.body.team_type,
+        user_id: req.session.user_id
     })
     .then(dbTeamData => res.json(dbTeamData))
     .catch(err => {
