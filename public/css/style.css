@@ -13,7 +13,8 @@ body {
   background-image: url("/img/bg.jpg") !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  background-size: auto;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .login-title {
@@ -118,7 +119,7 @@ div[class*="box"] {
 }
 
 .form-control {
-    width: 100% !important;
+  width: 100% !important;
 }
 
 .abtn {
@@ -144,28 +145,76 @@ a:active {
   padding-left: 20px;
 }
 
+.team-list{
+  background-color: rgba(7, 7, 0, 0.384) !important;
+  width: 50%;
+  color: rgb(252, 252, 252);
+  font-family: "Itim", cursive;
+  font-weight: bold;
+  border-radius: 15px 50px;
+}
+
 .team-form {
-    background-color: rgba(7, 7, 0, 0.384) !important;
-    width: 50%;
-    border-radius: 15px 50px;
+  background-color: rgba(7, 7, 0, 0.384) !important;
+  width: 50%;
+  border-radius: 15px 50px;
   background: #73AD21;
   padding: 20px;
   align-items: center;
  
-  
-
 }
 
 label {
-    color: white;
-    font-size: 20px;
+  color: white;
+  font-size: 20px;
 }
 
 .form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
- 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.float {
+  display: flex;
+  flex-direction: column;
+  float: right;
+}
+
+.form-control {
+  width: 500px !important;
+  background-color: rgba(7, 7, 0, 0.384) !important;
+}
+
+.form-control:active,
+.form-control:focus,
+.form-control:focus:active {
+  background-color: #96d3ec!important;
+  border-color: #96d3ec;
+  color: black;
+}
+
+th, td {
+    color: cornsilk;
     
+}
+
+.table, .table-bordered {
+    border: 6px solid white;
+    background-color: rgba(7, 7, 0, 0.384) !important;
+}
+
+h5, h3, p {
+    color: white;
+}
+
+.btn {
+    width: 100px;
+    color: white !important;
+}
+
+.indent {
+    text-indent: 90px;
+    font-weight: bold;
 }
 
